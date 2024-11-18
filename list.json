@@ -1,0 +1,9 @@
+---
+---
+{
+	"backgrounds": [
+		{% for item in site.data.backgrounds -%}
+			{"name": "{{ item.name }}", "colorcode": "{{ item.code }}"}{% unless forloop.last %},{% endunless %}
+		{% endfor %}
+	]
+}

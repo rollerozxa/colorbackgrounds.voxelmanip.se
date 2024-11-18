@@ -1,0 +1,106 @@
+
+/* roboto-slab-regular - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto Slab';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/roboto-slab-v34-latin-regular.woff2') format('woff2');
+}
+
+/* roboto-slab-700 - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto Slab';
+	font-style: normal;
+	font-weight: 700;
+	src: url('/fonts/roboto-slab-v34-latin-700.woff2') format('woff2');
+}
+
+/* roboto-mono-regular - latin */
+@font-face {
+	font-display: swap;
+	font-family: 'Roboto Mono';
+	font-style: normal;
+	font-weight: 400;
+	src: url('/fonts/roboto-mono-v23-latin-regular.woff2') format('woff2');
+}
+
+
+body {
+	font-family: "Roboto Slab", Georgia, serif;
+	margin: 0;
+	padding-top: 10px;
+	text-align: center;
+}
+
+a {
+	text-decoration: none;
+}
+a:hover {
+	text-decoration: underline;
+}
+
+p {
+	line-height: 1.5;
+}
+
+header {
+	margin: auto;
+	max-width: 1280px;
+}
+main {
+	border-top: 1px solid gray;
+	border-bottom: 1px solid gray;
+	padding: 20px 0px;
+	margin: auto;
+	max-width: 1920px;
+	display: flex;
+	flex-flow: row wrap;
+	justify-content: space-evenly;
+	gap: 15px 5px;
+}
+
+.bg {
+	border: 1px solid gray;
+}
+.bg img {
+	display: block;
+	height: 150px;
+	width: 190px;
+}
+.bg .code {
+	margin-top: 5px;
+	font-family: "Roboto Mono", monospace;
+}
+
+
+@media (prefers-color-scheme: light) {
+	body {
+		background-color: #ddddbb;
+		color: black;
+	}
+
+	a {
+		color: blue;
+	}
+
+	.bg {
+		background-color: #ffffff;
+	}
+}
+
+@media (prefers-color-scheme: dark) {
+	body {
+		background-color: #1b1a1f;
+		color: white;
+	}
+
+	a {
+		color: #a4a4ff;
+	}
+
+	.bg {
+		background-color: #0f0f0f;
+	}
+}

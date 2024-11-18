@@ -1,0 +1,45 @@
+---
+---
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>Colored Desktop Backgrounds</title>
+
+	<link rel="stylesheet" href="css/style.css">
+
+	<meta property="og:title" content="Colored Desktop Backgrounds">
+	<meta name="description" content="This is a site which contains a collection of colors that can be set as your desktop background wallpaper. Simply save the color you want as an image and set it as your wallpaper.">
+	<meta property="og:description" content="This is a site which contains a collection of colors that can be set as your desktop background wallpaper. Simply save the color you want as an image and set it as your wallpaper.">
+	<meta property="og:site_name" content="Colored Desktop Backgrounds">
+	<meta property="og:type" content="website">
+	<meta property="og:url" content="https://colorbackgrounds.voxelmanip.se">
+	<link rel="canonical" href="https://colorbackgrounds.voxelmanip.se">
+
+	<link rel="icon" type="image/svg+xml" href="favicon.svg">
+	<link rel="shortcut icon" href="favicon.ico">
+	<link rel="manifest" href="site.webmanifest">
+</head>
+<body>
+	<header>
+		<h1>Colored Desktop Backgrounds</h1>
+
+		<p>This is a site which contains a collection of pure colors that can be set as your desktop background wallpaper. Simply save the color you want as an image and set it as your wallpaper.</p>
+
+		<p>Most of the colors are taken from the standard <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/named-color">HTML color names</a>, but there are also some special ones.</p>
+
+		<p>While some operating systems have a built-in way to choose an arbitrary color value to use as your desktop wallpaper, some only offer a limited selection of basic colors to pick from. You can of course also use the hex color codes associated with each visible color too.</p>
+	</header>
+
+	<main>
+		{%- for item in site.data.backgrounds -%}
+		<div class="bg"><img src="imgs/{{ item.name | replace: ' ', '' }}.png"><div class="name">{{ item.name }}</div><div class="code">#{{ item.code }}</div></div>
+		{%- endfor -%}
+	</main>
+
+	<footer>
+		<p>Made by <a href="https://voxelmanip.se">ROllerozxa</a> - <a href="https://github.com/rollerozxa/colorbackgrounds.voxelmanip.se">Source code</a></p>
+	</footer>
+</body>
+</html>
